@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Filtros from "./Components/Filtros";
+import { productList } from "./productList";
+
 
 function App() {
+
+  const [valorMaximo, setValorMaximo] = useState("")
+  const [valorMinimo, setValorMinimo] = useState("")
+  const [busca, setBusca] = useState("")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>   
+      <Filtros 
+        valorMaximo={valorMaximo}
+        valorMinimo={valorMinimo}
+        busca={busca}
+        setValorMaximo={setValorMaximo}
+        setValorMinimo={setValorMinimo}
+        setBusca={setBusca}
+      />
+      { productList.map((product) => (
+        <section key={product.id}> 
+          <p>{product.nome}</p>
+          <p>{product.img}</p>
+          <p>{product.preco} </p>
+        </section>
+      ))}     
     </div>
   );
 }
