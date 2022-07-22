@@ -1,9 +1,14 @@
 
 import React, {useState} from "react";
 import Filtros from "./Components/Filtros";
+import styled from "styled-components";
 import { productList } from "./productList";
 
 
+const Card = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 function App() {
 
@@ -12,7 +17,7 @@ function App() {
   const [busca, setBusca] = useState("")
 
   return (
-    <div>   
+    <Card>   
       <Filtros 
         valorMaximo={valorMaximo}
         valorMinimo={valorMinimo}
@@ -27,8 +32,8 @@ function App() {
           <p>{product.img}</p>
           <p>{product.preco} </p>
         </section>
-      ))}     
-    </div>
+      ))}      
+    </Card>
   );
 }
 
