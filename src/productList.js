@@ -1,43 +1,51 @@
+import React from "react";
+import devastador from "./Img/devastador.png";
+import estrela from "./Img/estrela.png";
+import executor from "./Img/executor.png";
+import millenium from "./Img/millenium.png"
+import onibus from "./Img/onibus.png"
+import xwing from "./Img/x-wing.png"
+
 export const productList = [
     {
         id:1,
-        nome:"nave1",
-        img: "caminho",
+        nome:"Estrela da Morte",
+        img: <img src={estrela} alt="Nave - Estrela da morte"/>,
         preco: 20000
     },
 
     {
         id:2,
-        nome:"nave2",
-        img: "caminho",
+        nome:"Executor",
+        img: <img src={executor} alt="Nave - Executor"/>,
         preco: 30000
     },
     
     {
         id:3,
-        nome: "nave3",
-        img: "caminho",
+        nome: "Millennium Falcon",
+        img: <img src={millenium} alt="Nave - Millenium Falcon"/>,
         preco: 40000
     },
      
     {
         id:4,
-        nome: "nave4",
-        img: "caminho",
+        nome: "Devastador",
+        img: <img src={devastador} alt="Nave - Devastador"/>,
         preco: 22000
     },
      
     {
         id:5,
-        nome: "nave5",
-        img: "caminho",
+        nome: "Ônibus Imperial",
+        img: <img src={onibus} alt="Nave - Ônibus Imperial"/>,
         preco: 20500
     },
        
     {
         id:6,
-        nome: "nave6",
-        img: "caminho",
+        nome: "X-Wing",
+        img: <img src={xwing} alt="Nave - X-Wing"/>,
         preco: 50000
     }
 
